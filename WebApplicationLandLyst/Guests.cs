@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleAppTestAfLandlystDBContionH2
+namespace WebApplicationLandLyst
 {
     //GuestsID, ForeName, LastName, Address, Email, TelephoneNo, ZipCode
     class Guests

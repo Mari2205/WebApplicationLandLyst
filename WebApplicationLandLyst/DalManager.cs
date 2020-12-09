@@ -8,7 +8,7 @@ using Dapper;
 using System.Data;
 using System.Configuration;
 
-namespace ConsoleAppTestAfLandlystDBContionH2
+namespace WebApplicationLandLyst
 {
     public static class DalManager
     {

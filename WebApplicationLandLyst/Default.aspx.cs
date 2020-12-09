@@ -14,24 +14,14 @@ namespace WebApplicationLandLyst
 
         }
 
-        protected void CalendarLevingDate_SelectionChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        /// <summary>
+        /// HotelManager.SetGuests(fisteName, lastName, adderss, mail, telefonNo, zipCode);
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void ButtonSaveBooking_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void TextBoxFistName_TextChanged(object sender, EventArgs e)
-        {
-
+            HotelManager.SetGuests(fisteName, lastName, adderss, mail, telefonNo, zipCode);
         }
     }
 }

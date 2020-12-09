@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
 
-namespace ConsoleAppTestAfLandlystDBContionH2
+namespace WebApplicationLandLyst
 {
     public static class DBconnection
     {

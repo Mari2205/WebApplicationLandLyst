@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 /// <summary>
 /// ServiceName, Price
 /// </summary>
-namespace ConsoleAppTestAfLandlystDBContionH2
+namespace WebApplicationLandLyst
 {
     class HotelService
     {
