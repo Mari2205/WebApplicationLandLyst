@@ -1,4 +1,5 @@
-﻿//using System;
+﻿#region System using infomation
+//using System;
 //using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
@@ -8,6 +9,8 @@
 //{
 //    class Program
 //    {
+#endregion
+
 //        static void Main(string[] args)
 //        {
 #region done with tranfere
@@ -36,14 +39,15 @@
 //                Console.WriteLine("hvilken service vil du have: ");
 //                usrService = Console.ReadLine();
 //            }
-
+#region done with transfere
 //            Console.WriteLine("hvilken dato for ankomst :");
 //            DateTime usrADate = DateTime.Parse(Console.ReadLine());
 //            Console.WriteLine("hvilken hjem dato :");
 //            DateTime usrLDate = DateTime.Parse(Console.ReadLine());
+#endregion
 //            Console.WriteLine("hvilken kunde numer :");
 //            int usrCustomerNo = Int32.Parse(Console.ReadLine());
-
+#region done with transfere
 //            List<Room> rooms = HotelManager.GetRooms(usrServiceYesOrNo, usrService, usrADate, usrLDate);
 
 //            Console.WriteLine("Room No | Price");
@@ -51,12 +55,11 @@
 //            {
 //                Console.WriteLine("  " + item.RoomNo + "       " + item.Price);
 //            }
-
+#endregion
 //            Console.WriteLine("hvilken vælget værlse :");
 //            int usrRoomNo = Int32.Parse(Console.ReadLine());
-
+#region done with transfere
 //            DalManager.SetBookings(usrADate, usrLDate, usrCustomerNo, usrRoomNo);
-
 
 //            Console.WriteLine("den samlet pris er : ");
 //            TotalAmount totalAmount = new TotalAmount();
@@ -64,6 +67,7 @@
 
 //            Console.WriteLine("// SLUT");
 //            Console.ReadKey();
+#endregion
 //        }
 //    }
 //}

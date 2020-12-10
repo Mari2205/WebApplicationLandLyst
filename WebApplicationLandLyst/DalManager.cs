@@ -19,9 +19,15 @@ namespace WebApplicationLandLyst
             List<Booking> bookings = DalManager.GetRoomInUse(ServiceYesOrNo, usrADate, usrLDate);
 
             string contentsFromRoomUse = "";
+            int CheckNo = 0;
             foreach (Booking item in bookings)
             {
                 contentsFromRoomUse = contentsFromRoomUse + "Room.RoomNo <> " + item.RoomNo;
+                CheckNo++;
+                if(bookings.Count > CheckNo)
+                {
+                    contentsFromRoomUse = contentsFromRoomUse + " and ";
+                }
             }
 
             using (SqlConnection connection = new SqlConnection(DBconnection.connect("LandLystDB")))
@@ -34,7 +40,7 @@ namespace WebApplicationLandLyst
                     select dbo.RoomServices.RoomNo, dbo.Room.Price from dbo.Room
                     join dbo.RoomServices
                     on dbo.Room.RoomNo = dbo.RoomServices.RoomNo
-                    where dbo.RoomServices.SerName = '{service}' and dbo.Room.Cleaned = 'true' and {contentsFromRoomUse};", connection);
+                    where dbo.RoomServices.SerName = '{service}' and dbo.Room.Cleaned = 'true';", connection);
                 }
                 else
                 {
@@ -47,7 +53,6 @@ namespace WebApplicationLandLyst
 
                 while (dataReader.Read())
                 {
-                    // RoomNo, Price
                     int roomNo = (int)dataReader["RoomNo"];
                     int price = (int)dataReader["Price"];
 

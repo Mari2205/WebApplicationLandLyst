@@ -159,13 +159,58 @@ namespace WebApplicationLandLyst
         protected global::System.Web.UI.WebControls.DropDownList DropDownServices;
 
         /// <summary>
-        /// ListBox1 control.
+        /// GridViewRoomNo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListBox1;
+        protected global::System.Web.UI.WebControls.GridView GridViewRoomNo;
+
+        /// <summary>
+        /// LabelRoomPicking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelRoomPicking;
+
+        /// <summary>
+        /// TextBoxRoompicking control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxRoompicking;
+
+        /// <summary>
+        /// LabelTextBeforePrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTextBeforePrice;
+
+        /// <summary>
+        /// LabelPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelPrice;
+
+        /// <summary>
+        /// ButtonCheckRooms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonCheckRooms;
 
         /// <summary>
         /// ButtonSaveBooking control.

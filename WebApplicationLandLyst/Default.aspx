@@ -75,9 +75,28 @@
                 <asp:ListItem>Eget køkken</asp:ListItem>
             </asp:DropDownList>
 		</div>
-        <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
+        <asp:GridView ID="GridViewRoomNo" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
+            <FooterStyle BackColor="#CCCCCC" />
+            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
+            <PagerStyle BackColor="#CCCCCC" ForeColor="Black" HorizontalAlign="Left" />
+            <RowStyle BackColor="White" />
+            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
+            <SortedAscendingCellStyle BackColor="#F1F1F1" />
+            <SortedAscendingHeaderStyle BackColor="#808080" />
+            <SortedDescendingCellStyle BackColor="#CAC9C9" />
+            <SortedDescendingHeaderStyle BackColor="#383838" />
+        </asp:GridView>
         <br/>
+		<div ID ="usrRoomNo">
+            <asp:Label ID="LabelRoomPicking" runat="server" Text="vælg et værelse "></asp:Label>
+            <asp:TextBox ID="TextBoxRoompicking" runat="server"></asp:TextBox>
+		</div>
+		<div ID ="PriceLabels">
+            <asp:Label ID="LabelTextBeforePrice" runat="server" Text="Den samlet price er : "></asp:Label>
+            <asp:Label ID="LabelPrice" runat="server" Text=""></asp:Label>
+		</div>
 		<div>
+            <asp:Button ID="ButtonCheckRooms" runat="server" Text="Søg på værlser" OnClick="ButtonCheckRooms_Click" />
 			<asp:Button ID="ButtonSaveBooking" runat="server" Text="Foretage reservation" OnClick="ButtonSaveBooking_Click" />
 		</div>
 
