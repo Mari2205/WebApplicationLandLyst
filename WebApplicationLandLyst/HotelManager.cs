@@ -24,6 +24,12 @@ namespace WebApplicationLandLyst
             return DalManager.GetServicesPrice(roomNo);
 
         }
+
+        public static List<TotalAmount> GetGuestsID()
+        {
+            return DalManager.get;
+
+        }
         #endregion
 
         #region Gets stored procedures from DalManageer

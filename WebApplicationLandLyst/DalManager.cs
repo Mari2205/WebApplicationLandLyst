@@ -118,6 +118,35 @@ namespace WebApplicationLandLyst
             return amounts;
         }
 
+        public static List<Guests> GetGuestsID()
+        {
+            List<Guests> guests = new List<Guests>();
+
+            using (SqlConnection connection = new SqlConnection(DBconnection.connect("LandLystDB")))
+            {
+                SqlCommand cmd;
+                connection.Open();
+
+                cmd = new SqlCommand($@"
+                SELECT TOP 1 GuestsID FROM dbo.Guests 
+                ORDER BY dbo.Guests.GuestsID DESC", connection);
+
+
+                SqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    int guestsId = (int)dataReader["GuestsID"];
+
+                    Guests guest = new Guests()
+                    { GuestsID = guestsId };
+
+                    guests.Add(guest);
+                }
+            }
+            return guests;
+        }
+
         private static List<Booking> GetRoomInUse(string ServiceYesOrNo, DateTime usrADate, DateTime usrLDate)
         {
             List<Booking> bookedRoomNo = new List<Booking>();

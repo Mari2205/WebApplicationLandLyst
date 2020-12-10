@@ -87,6 +87,15 @@ namespace WebApplicationLandLyst
         protected global::System.Web.UI.WebControls.TextBox TextBoxPhoneNo;
 
         /// <summary>
+        /// ButtonSaveGuest control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ButtonSaveGuest;
+
+        /// <summary>
         /// CalendarArrivalDate control.
         /// </summary>
         /// <remarks>

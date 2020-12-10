@@ -91,5 +91,18 @@ namespace WebApplicationLandLyst
             yesOrNo = "nej";
             usrServices = "";
         }
+
+        protected void ButtonSaveGuest_Click(object sender, EventArgs e)
+        {
+            string fisteName = TextBoxFistName.Text;
+            string lastName = TextBoxLastName.Text;
+            string adderss = "JVej no. 8";
+            string mail = TextBoxMail.Text;
+            int telefonNo = Convert.ToInt32(TextBoxPhoneNo.Text);
+            int zipCode = 4800;
+
+            HotelManager.SetGuests(fisteName, lastName, adderss, mail, telefonNo, zipCode);
+
+        }
     }
 }

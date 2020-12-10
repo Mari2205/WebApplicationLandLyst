@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace WebApplicationLandLyst
 {
     //GuestsID, ForeName, LastName, Address, Email, TelephoneNo, ZipCode
-    class Guests
+    public class Guests
     {
         public int GuestsID { get; set; }
         public string ForeName { get; set; }

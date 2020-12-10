@@ -16,7 +16,7 @@
 			</div>
 		</div>
         <div style ="position : relative">
-			<div style ="position : absolute; left: 0px; top: 2px; height: 25px; width: 169px;">
+			<div style ="position : absolute; left: 0px; top: 2px; width: 169px;">
 				<asp:Label ID="LabelMail" runat="server" Text="E-mail"></asp:Label>
 				<asp:TextBox ID="TextBoxMail" runat="server"></asp:TextBox>
 			</div>
@@ -25,6 +25,9 @@
 				<asp:TextBox ID="TextBoxPhoneNo" runat="server"></asp:TextBox>
 
 			</div>
+        </div>
+        <div>
+            <asp:Button ID="ButtonSaveGuest" runat="server" Text="Oprat Bruger" OnClick="ButtonSaveGuest_Click" />
         </div>
 	</div>
 	<div id="Bookring" style="height: 900px">

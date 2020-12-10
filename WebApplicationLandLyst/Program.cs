@@ -29,7 +29,7 @@
 //            int zipCode = int.Parse(Console.ReadLine());
 
 //            HotelManager.SetGuests(fisteName, lastName, adderss, mail, telefonNo, zipCode);
-#endregion
+
 
 //            Console.WriteLine("vil du have en særlid service : ja|nej");
 //            string usrServiceYesOrNo = Console.ReadLine();
@@ -39,7 +39,8 @@
 //                Console.WriteLine("hvilken service vil du have: ");
 //                usrService = Console.ReadLine();
 //            }
-#region done with transfere
+
+
 //            Console.WriteLine("hvilken dato for ankomst :");
 //            DateTime usrADate = DateTime.Parse(Console.ReadLine());
 //            Console.WriteLine("hvilken hjem dato :");
@@ -55,10 +56,10 @@
 //            {
 //                Console.WriteLine("  " + item.RoomNo + "       " + item.Price);
 //            }
-#endregion
+
 //            Console.WriteLine("hvilken vælget værlse :");
 //            int usrRoomNo = Int32.Parse(Console.ReadLine());
-#region done with transfere
+
 //            DalManager.SetBookings(usrADate, usrLDate, usrCustomerNo, usrRoomNo);
 
 //            Console.WriteLine("den samlet pris er : ");
