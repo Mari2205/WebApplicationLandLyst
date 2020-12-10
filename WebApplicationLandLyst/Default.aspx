@@ -15,7 +15,6 @@
                 <asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox>
 			</div>
 		</div>
-
         <div style ="position : relative">
 			<div style ="position : absolute; left: 0px; top: 2px; height: 25px; width: 169px;">
 				<asp:Label ID="LabelMail" runat="server" Text="E-mail"></asp:Label>
@@ -42,6 +41,7 @@
 					<TitleStyle BackColor="Black" Font-Bold="True" Font-Size="13pt" ForeColor="White" Height="14pt"/>
 				</asp:Calendar>
                 <asp:TextBox ID="TextBoxArrivalDate" runat="server"></asp:TextBox>
+
 			</div>
 			<div style="position: absolute;  left : 280px; top: 4px;">
 				<asp:Calendar ID="CalendarLevingDate" runat="server" BackColor="Black" BorderColor="Black" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="White" Height="110px" NextPrevFormat="ShortMonth" TitleFormat="Month" Width="245px" OnSelectionChanged="CalendarLevingDate_SelectionChanged">
@@ -64,16 +64,18 @@
 		</div>
 		<br />
 		<div>
+            <asp:Label ID="LabelYesAndNo" runat="server" Text="vil vil du have en særlig service: "></asp:Label>
+            <asp:Label ID="LabelYes" runat="server" Text="Ja "></asp:Label>
+            <asp:RadioButton ID="RadioButtonYes" runat="server" AutoPostBack="True" GroupName="yesAndNoGroup" OnCheckedChanged="RadioButtonYes_CheckedChanged" />
+            <asp:Label ID="LabelNo" runat="server" Text="Nej "></asp:Label>
+			<asp:RadioButton ID="RadioButtonNo" runat="server" AutoPostBack="True" GroupName="yesAndNoGroup" OnCheckedChanged="RadioButtonNo_CheckedChanged" />
+		</div>
+        <br/>
+		<div>
             <asp:Label ID="LabelDropDownServices" runat="server" Text="Services"></asp:Label>
-			<asp:DropDownList ID="DropDownServices" runat="server" Height="22px" Width="156px">
-				<asp:ListItem>Vælg en service</asp:ListItem>
-                <asp:ListItem>Altan</asp:ListItem>
-                <asp:ListItem>Doubletseng</asp:ListItem>
-                <asp:ListItem>2 enkeltsenge</asp:ListItem>
-                <asp:ListItem>Badekar</asp:ListItem>
-                <asp:ListItem>Jacuzzi</asp:ListItem>
-                <asp:ListItem>Eget køkken</asp:ListItem>
+			<asp:DropDownList ID="DropDownServices" runat="server" Height="30px" Width="250px" DataSourceID="SqlDataSourceDB" DataTextField="ServiceName" DataValueField="ServiceName">
             </asp:DropDownList>
+		    <asp:SqlDataSource ID="SqlDataSourceDB" runat="server" ConnectionString="<%$ ConnectionStrings:LandLystDB %>" SelectCommand="SELECT * FROM [HotelServices]"></asp:SqlDataSource>
 		</div>
         <asp:GridView ID="GridViewRoomNo" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
             <FooterStyle BackColor="#CCCCCC" />
@@ -91,10 +93,12 @@
             <asp:Label ID="LabelRoomPicking" runat="server" Text="vælg et værelse "></asp:Label>
             <asp:TextBox ID="TextBoxRoompicking" runat="server"></asp:TextBox>
 		</div>
+        <br/>
 		<div ID ="PriceLabels">
             <asp:Label ID="LabelTextBeforePrice" runat="server" Text="Den samlet price er : "></asp:Label>
             <asp:Label ID="LabelPrice" runat="server" Text=""></asp:Label>
 		</div>
+        <br/>
 		<div>
             <asp:Button ID="ButtonCheckRooms" runat="server" Text="Søg på værlser" OnClick="ButtonCheckRooms_Click" />
 			<asp:Button ID="ButtonSaveBooking" runat="server" Text="Foretage reservation" OnClick="ButtonSaveBooking_Click" />

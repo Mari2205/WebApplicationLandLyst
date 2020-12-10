@@ -9,9 +9,13 @@ namespace WebApplicationLandLyst
 {
     public partial class _Default : Page
     {
+        protected string yesOrNo = null;
+        protected string usrServices = null;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            LabelDropDownServices.Visible = false;
+            DropDownServices.Visible = false;
         }
 
 
@@ -27,27 +31,22 @@ namespace WebApplicationLandLyst
             //HotelManager.SetGuests(fisteName, lastName, adderss, mail, telefonNo, zipCode);
             #endregion
 
-            #region moved to anyther boutten (OUT COMMENTE)
-            //DateTime date = DateTime.Parse(TextBoxArrivalDate.Text);
-            //DateTime ldate = DateTime.Parse(TextBoxLevingDate.Text);
-
-
-            //List<Room> rooms = HotelManager.GetRooms("nej", "", date, ldate);
-
-            //GridViewRoomNo.DataSource = rooms;
-            //GridViewRoomNo.DataBind();
-            #endregion
-
 
             DateTime ArrivalDate = DateTime.Parse(TextBoxArrivalDate.Text);
             DateTime levingDate = DateTime.Parse(TextBoxLevingDate.Text);
 
             int usrRoomChoose = int.Parse(TextBoxRoompicking.Text);
 
-            DalManager.SetBookings(ArrivalDate, levingDate, 1, usrRoomChoose);
+            
 
+            #region SetBooking
+            DalManager.SetBookings(ArrivalDate, levingDate, 1, usrRoomChoose); // manglier noget til vælge brugene
+            #endregion
+
+            #region TotalAmount
             TotalAmount totalAmount = new TotalAmount();
             LabelPrice.Text = totalAmount.Percentage(ArrivalDate, levingDate, usrRoomChoose).ToString();
+            #endregion
         }
 
         protected void CalendarArrivalDate_SelectionChanged(object sender, EventArgs e)
@@ -71,10 +70,26 @@ namespace WebApplicationLandLyst
             DateTime ArrivalDate = DateTime.Parse(TextBoxArrivalDate.Text);
             DateTime levingDate = DateTime.Parse(TextBoxLevingDate.Text);
 
-            List<Room> rooms = HotelManager.GetRooms("nej", "", ArrivalDate, levingDate);
+            List<Room> rooms = HotelManager.GetRooms(yesOrNo, usrServices, ArrivalDate, levingDate);
 
             GridViewRoomNo.DataSource = rooms;
             GridViewRoomNo.DataBind();
+        }
+
+        protected void RadioButtonYes_CheckedChanged(object sender, EventArgs e)
+        {
+            LabelDropDownServices.Visible = true;
+            DropDownServices.Visible = true;
+            yesOrNo = "ja";
+            usrServices = DropDownServices.Text;
+        }
+
+        protected void RadioButtonNo_CheckedChanged(object sender, EventArgs e)
+        {
+            LabelDropDownServices.Visible = false;
+            DropDownServices.Visible = false;
+            yesOrNo = "nej";
+            usrServices = "";
         }
     }
 }

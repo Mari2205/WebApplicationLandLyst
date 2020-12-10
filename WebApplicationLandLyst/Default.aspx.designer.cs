@@ -141,6 +141,51 @@ namespace WebApplicationLandLyst
         protected global::System.Web.UI.WebControls.TextBox TextBoxBookingNo;
 
         /// <summary>
+        /// LabelYesAndNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelYesAndNo;
+
+        /// <summary>
+        /// LabelYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelYes;
+
+        /// <summary>
+        /// RadioButtonYes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonYes;
+
+        /// <summary>
+        /// LabelNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelNo;
+
+        /// <summary>
+        /// RadioButtonNo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButton RadioButtonNo;
+
+        /// <summary>
         /// LabelDropDownServices control.
         /// </summary>
         /// <remarks>
@@ -157,6 +202,15 @@ namespace WebApplicationLandLyst
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList DropDownServices;
+
+        /// <summary>
+        /// SqlDataSourceDB control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSourceDB;
 
         /// <summary>
         /// GridViewRoomNo control.
