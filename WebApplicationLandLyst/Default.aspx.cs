@@ -37,7 +37,7 @@ namespace WebApplicationLandLyst
 
             int usrRoomChoose = int.Parse(TextBoxRoompicking.Text);
 
-            
+
 
             #region SetBooking
             DalManager.SetBookings(ArrivalDate, levingDate, 1, usrRoomChoose); // manglier noget til vælge brugene
@@ -102,6 +102,13 @@ namespace WebApplicationLandLyst
             int zipCode = 4800;
 
             HotelManager.SetGuests(fisteName, lastName, adderss, mail, telefonNo, zipCode);
+
+            List<Guests> guests = HotelManager.GetGuestsID();
+            foreach (Guests item in guests)
+            {
+                TextBoxGuestsId.Text = item.GuestsID.ToString();
+            }
+
 
         }
     }

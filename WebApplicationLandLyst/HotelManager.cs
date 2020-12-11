@@ -25,9 +25,9 @@ namespace WebApplicationLandLyst
 
         }
 
-        public static List<TotalAmount> GetGuestsID()
+        public static List<Guests> GetGuestsID()
         {
-            return DalManager.get;
+            return DalManager.GetGuestsID();
 
         }
         #endregion

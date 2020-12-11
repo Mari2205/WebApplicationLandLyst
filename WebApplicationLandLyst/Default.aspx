@@ -5,7 +5,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 	
 	<div id="Guests" style="height: 79px">
-		<div id ="Name" style="position : relative; top: 30px; left: 0px; height: 69px;">
+		<div id ="Name" style="position : relative; top: 21px; left: 3px; height: 55px;">
 			<div style ="position : absolute; left: 0px">
 				<asp:Label ID="LabelFistName" runat="server" Text="Forenavn"/>
 				<asp:TextBox ID="TextBoxFistName" runat="server"/>
@@ -15,7 +15,7 @@
                 <asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox>
 			</div>
 		</div>
-        <div style ="position : relative">
+        <div style ="position : relative; top: 85px; left: 7px; height: 40px;">
 			<div style ="position : absolute; left: 0px; top: 2px; width: 169px;">
 				<asp:Label ID="LabelMail" runat="server" Text="E-mail"></asp:Label>
 				<asp:TextBox ID="TextBoxMail" runat="server"></asp:TextBox>
@@ -26,14 +26,22 @@
 
 			</div>
         </div>
+		<div>
+            <asp:Label ID="LabelGuestsId" runat="server" Text="you´re guest ID "></asp:Label>
+            <asp:TextBox ID="TextBoxGuestsId" runat="server"></asp:TextBox>
+		</div>
+	</div>
+	<div id="Bookring" style="height: 1101px">
+		<br />
+        <br />
+        <br />
+        <br />
+		<br />
         <div>
             <asp:Button ID="ButtonSaveGuest" runat="server" Text="Oprat Bruger" OnClick="ButtonSaveGuest_Click" />
         </div>
-	</div>
-	<div id="Bookring" style="height: 900px">
-		<br />
-		<div id="Calender" style="position: relative; top: 17px; left: 2px; margin-bottom: 55px; height: 238px; width: 1270px;">
-			<div style="position: absolute; left: 0px">
+		<div id="Calender" style="position: relative; top: 125px; left: 4px; margin-bottom: 55px; height: 238px; width: 1270px;">
+			<div style="position: absolute; left: 3px; top: 3px;">
 				<asp:Calendar ID="CalendarArrivalDate" runat="server" BackColor="Black" BorderColor="Black" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="White" Height="110px" NextPrevFormat="ShortMonth" TitleFormat="Month" Width="245px" OnSelectionChanged="CalendarArrivalDate_SelectionChanged">
 					<DayHeaderStyle BackColor="WhiteSmoke" Font-Bold="True" Font-Size="7pt" ForeColor="Black" Height="10pt"/>
 					<DayStyle Width="14%"/>
@@ -60,11 +68,16 @@
 			</div>
 		</div>
 		<div>
+		</div>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
 			<div>
 				<asp:Label ID="LabelBookingNo" runat="server" Text="BookingNo" />
 				<asp:TextBox ID="TextBoxBookingNo" runat="server"/>
 			</div>
-		</div>
 		<br />
 		<div>
             <asp:Label ID="LabelYesAndNo" runat="server" Text="vil vil du have en særlig service: "></asp:Label>
@@ -79,6 +92,7 @@
 			<asp:DropDownList ID="DropDownServices" runat="server" Height="30px" Width="250px" DataSourceID="SqlDataSourceDB" DataTextField="ServiceName" DataValueField="ServiceName">
             </asp:DropDownList>
 		    <asp:SqlDataSource ID="SqlDataSourceDB" runat="server" ConnectionString="<%$ ConnectionStrings:LandLystDB %>" SelectCommand="SELECT * FROM [HotelServices]"></asp:SqlDataSource>
+		    <br />
 		</div>
         <asp:GridView ID="GridViewRoomNo" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
             <FooterStyle BackColor="#CCCCCC" />
@@ -91,6 +105,7 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+        <br />
         <br/>
 		<div ID ="usrRoomNo">
             <asp:Label ID="LabelRoomPicking" runat="server" Text="vælg et værelse "></asp:Label>
