@@ -4,44 +4,54 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 	
-	<div id="Guests" style="height: 79px">
-		<div id ="Name" style="position : relative; top: 21px; left: 3px; height: 55px;">
+	<div id="Guests" style="height: 79px; background-color:#DCDCDC;">
+		<div id ="Name" style="position : relative; left: 0px">
 			<div style ="position : absolute; left: 0px">
 				<asp:Label ID="LabelFistName" runat="server" Text="Forenavn"/>
+				<br />
 				<asp:TextBox ID="TextBoxFistName" runat="server"/>
 			</div>
 			<div style ="position : absolute; left: 280px">
                 <asp:Label ID="LabelLastName" runat="server" Text="Efternavn"></asp:Label>
+				<br />
                 <asp:TextBox ID="TextBoxLastName" runat="server"></asp:TextBox>
 			</div>
-		</div>
-        <div style ="position : relative; top: 85px; left: 7px; height: 40px;">
-			<div style ="position : absolute; left: 0px; top: 2px; width: 169px;">
+		</div> <%-- Name end--%>
+		<br />
+		<br />
+        <br />
+        <div Id ="ContactInformation" style ="position : relative; ">
+			<div style ="position : absolute; left: 0px;">
 				<asp:Label ID="LabelMail" runat="server" Text="E-mail"></asp:Label>
+				<br />
 				<asp:TextBox ID="TextBoxMail" runat="server"></asp:TextBox>
-			</div>
-			<div style="position : absolute; left: 280px; height: 31px">
+			</div> 
+			<div style="position : absolute; left: 280px;">
 				<asp:Label ID="LabelPhoneNo" runat="server" Text="Telefon number"></asp:Label>
+				<br />
 				<asp:TextBox ID="TextBoxPhoneNo" runat="server"></asp:TextBox>
-
 			</div>
-        </div>
+        </div><%--ContactInformation end--%>
+		<br />
+        <br/>
+		<br/>
 		<div>
             <asp:Label ID="LabelGuestsId" runat="server" Text="you´re guest ID "></asp:Label>
+			<br />
             <asp:TextBox ID="TextBoxGuestsId" runat="server"></asp:TextBox>
 		</div>
-	</div>
-	<div id="Bookring" style="height: 1101px">
-		<br />
-        <br />
-        <br />
-        <br />
 		<br />
         <div>
-            <asp:Button ID="ButtonSaveGuest" runat="server" Text="Oprat Bruger" OnClick="ButtonSaveGuest_Click" />
+            <asp:Button ID="ButtonSaveGuest" runat="server" Text="Oprat Bruger" OnClick="ButtonSaveGuest_Click" Width="125px" />
         </div>
-		<div id="Calender" style="position: relative; top: 125px; left: 4px; margin-bottom: 55px; height: 238px; width: 1270px;">
-			<div style="position: absolute; left: 3px; top: 3px;">
+	</div><%-- Guests end--%>
+	<br />
+	<br />
+	<br />
+	<br />
+	<div id="Bookring" style="height: 800px;">
+		<div id="Calender" style="position: relative; top: 125px; left: 0px; margin-bottom: 55px; height: 238px; width: 1270px;">
+			<div style="position: absolute; left: 0px; top: 3px;">
 				<asp:Calendar ID="CalendarArrivalDate" runat="server" BackColor="Black" BorderColor="Black" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="White" Height="110px" NextPrevFormat="ShortMonth" TitleFormat="Month" Width="245px" OnSelectionChanged="CalendarArrivalDate_SelectionChanged">
 					<DayHeaderStyle BackColor="WhiteSmoke" Font-Bold="True" Font-Size="7pt" ForeColor="Black" Height="10pt"/>
 					<DayStyle Width="14%"/>
@@ -66,11 +76,7 @@
 				</asp:Calendar>
                 <asp:TextBox ID="TextBoxLevingDate" runat="server"></asp:TextBox>
 			</div>
-		</div>
-		<div>
-		</div>
-        <br />
-        <br />
+		  </div> <%-- Calendar end--%>
         <br />
         <br />
         <br />
@@ -94,6 +100,7 @@
 		    <asp:SqlDataSource ID="SqlDataSourceDB" runat="server" ConnectionString="<%$ ConnectionStrings:LandLystDB %>" SelectCommand="SELECT * FROM [HotelServices]"></asp:SqlDataSource>
 		    <br />
 		</div>
+		<div id ="GridView" style = "width: 224px; height: 180px; overflow: scroll; scrollbar-arrow-color:floralwhite; scrollbar-base-color:floralwhite; background-color:#DCDCDC">
         <asp:GridView ID="GridViewRoomNo" runat="server" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellPadding="4" CellSpacing="2" ForeColor="Black">
             <FooterStyle BackColor="#CCCCCC" />
             <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
@@ -105,6 +112,7 @@
             <SortedDescendingCellStyle BackColor="#CAC9C9" />
             <SortedDescendingHeaderStyle BackColor="#383838" />
         </asp:GridView>
+		</div> <%--Gridview end--%>
         <br />
         <br/>
 		<div ID ="usrRoomNo">
@@ -117,10 +125,10 @@
             <asp:Label ID="LabelPrice" runat="server" Text=""></asp:Label>
 		</div>
         <br/>
+		<br/>
 		<div>
             <asp:Button ID="ButtonCheckRooms" runat="server" Text="Søg på værlser" OnClick="ButtonCheckRooms_Click" />
 			<asp:Button ID="ButtonSaveBooking" runat="server" Text="Foretage reservation" OnClick="ButtonSaveBooking_Click" />
 		</div>
-
-	</div>
+	  </div> <%--Booking end--%>
 </asp:Content>

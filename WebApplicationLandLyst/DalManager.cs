@@ -160,7 +160,6 @@ namespace WebApplicationLandLyst
                 select dbo.Booking.RoomNo from dbo.Booking
                 where Booking.CheckIn between '2020-05-01' and '2020-10-03';", connection);
 
-
                 SqlDataReader dataReader = cmd.ExecuteReader();
 
                 while (dataReader.Read())

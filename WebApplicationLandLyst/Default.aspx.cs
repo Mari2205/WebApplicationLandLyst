@@ -40,7 +40,7 @@ namespace WebApplicationLandLyst
 
 
             #region SetBooking
-            DalManager.SetBookings(ArrivalDate, levingDate, 1, usrRoomChoose); // manglier noget til vælge brugene
+            DalManager.SetBookings(ArrivalDate, levingDate, int.Parse(TextBoxGuestsId.Text), usrRoomChoose); // manglier noget til vælge brugene
             #endregion
 
             #region TotalAmount
