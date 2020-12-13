@@ -4,6 +4,16 @@
 
 <html lang="en">
 <head runat="server">
+    <script>
+        var i = 0;
+        function divChange() {
+            var divtag = document.getElementById("GridView");
+            var backColour = ["purple", "yellow", "Blue"]
+            divtag.style.backgroundColor = backColour[i];
+            i = (i + 1) % backColour.length;
+        }
+        setInterval(divChange, 2000);
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%: Page.Title %> - LandLyst</title>

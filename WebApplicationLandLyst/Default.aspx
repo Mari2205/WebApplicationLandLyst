@@ -5,6 +5,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 	
 	<div id="Guests" style="height: 79px; background-color:#DCDCDC;">
+		<h3>Guests</h3>
 		<div id ="Name" style="position : relative; left: 0px">
 			<div style ="position : absolute; left: 0px">
 				<asp:Label ID="LabelFistName" runat="server" Text="Forenavn"/>
@@ -50,6 +51,7 @@
 	<br />
 	<br />
 	<div id="Bookring" style="height: 800px;">
+		<h3>Booking</h3>
 		<div id="Calender" style="position: relative; top: 125px; left: 0px; margin-bottom: 55px; height: 238px; width: 1270px;">
 			<div style="position: absolute; left: 0px; top: 3px;">
 				<asp:Calendar ID="CalendarArrivalDate" runat="server" BackColor="Black" BorderColor="Black" Font-Names="Times New Roman" Font-Size="10pt" ForeColor="White" Height="110px" NextPrevFormat="ShortMonth" TitleFormat="Month" Width="245px" OnSelectionChanged="CalendarArrivalDate_SelectionChanged">
